@@ -3,12 +3,16 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
     * {
         box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: "Nunito", sans-serif;
     }
 
     ::after, ::before {
         box-sizing: inherit;
+    }
+
+    body {
+        background-color: #22254b;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        margin: 0;
     }
 `;
