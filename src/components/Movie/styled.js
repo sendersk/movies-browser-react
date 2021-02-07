@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
   overflow: hidden;
   margin: 1rem;
-  width: 250px;
+  width: 22%;
 `;
 
 export const Image = styled.img`
@@ -17,7 +17,7 @@ export const Info = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1rem;
 `;
 
 export const Header = styled.h3`
