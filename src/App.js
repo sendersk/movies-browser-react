@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Movie from "./components/Movie/Movie";
+import {Container} from "./components/Container/styled"
 
 const FEATURED_API =
   "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=f271630baa852ad3c9f1b5da3a4d53aa&page=1";
@@ -19,10 +20,10 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <Container>
       {movies.length > 0 &&
         movies.map((movie) => <Movie key={movie.id} {...movie} />)}
-    </div>
+    </Container>
   );
 }
 
