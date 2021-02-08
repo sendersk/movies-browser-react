@@ -8,7 +8,7 @@ export const Overview = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  transform: translateX(-100%);
+  transform: translateY(100%);
 `;
 
 export const Wrapper = styled.div`
@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
 
   &:hover {
     ${Overview} {
-      transform: translateX(0%);
+      transform: translateY(0%);
       transition: .3s ease-out;
     }
   }
