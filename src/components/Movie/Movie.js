@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper, Image, Info, Header } from "./styled";
+import { Wrapper, Image, Info, Header, Overview } from "./styled";
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
@@ -11,6 +11,10 @@ function Movie({ title, poster_path, overview, vote_average }) {
           <Header>{title}</Header>
           <span>{vote_average}</span>
         </Info>
+        <Overview>
+          <h2>Overview:</h2>
+          <p>{overview}</p>
+        </Overview>
     </Wrapper>
   );
 }
