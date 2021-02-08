@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   border-radius: 3px;
   box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
   overflow: hidden;
+  position: relative;
   margin: 1rem;
   width: 22%;
 `;
@@ -23,3 +24,17 @@ export const Info = styled.div`
 export const Header = styled.h3`
   margin: 0;
 `;
+
+export const Overview = styled.div`
+  background-color: #fff;
+  color: #22254b;
+  padding: 1rem;
+  position: absolute;
+  bottom:0;
+  left: 0;
+  right:0;
+
+  
+  transform: translateX(100%);
+  
+`
