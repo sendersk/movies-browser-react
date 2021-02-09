@@ -10,7 +10,7 @@ export const Overview = styled.div`
   right: 0;
   overflow: auto;
   max-height: 100%;
-  transform: translateY(100%);
+  transform: translateY(102%);
 `;
 
 export const Wrapper = styled.div`
