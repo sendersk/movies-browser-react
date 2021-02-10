@@ -1,10 +1,11 @@
 import React from 'react'
+import {Wrapper, Input} from "./styled"
 
 function Search() {
     return (
-        <header>
-            <input type="search" placeholder="Search..." />
-        </header>
+        <Wrapper>
+            <Input type="search" placeholder="Search..." />
+        </Wrapper>
     )
 }
 
