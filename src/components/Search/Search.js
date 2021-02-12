@@ -1,12 +1,29 @@
-import React from 'react'
-import {Wrapper, Input} from "./styled"
+import React, { useState } from "react";
+import { Wrapper, Input } from "./styled";
 
 function Search() {
-    return (
-        <Wrapper>
-            <Input type="search" placeholder="Search..." />
-        </Wrapper>
-    )
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const handleOnChange = (e) => {
+      setSearchTerm(e.target.value)
+  }
+
+  return (
+    <Wrapper>
+      <form onSubmit={handleOnSubmit}>
+        <Input
+          type="search"
+          value={searchTerm}
+          onChange={handleOnChange}
+          placeholder="Search..."
+        />
+      </form>
+    </Wrapper>
+  );
 }
 
-export default Search
+export default Search;
