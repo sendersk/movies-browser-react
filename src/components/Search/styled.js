@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
 
 export const Input = styled.input`
   background-color: transparent;
-  color: #22254b;
+  color: #fff;
   font-size: 20px;
   padding: 6px 12px;
   border: 2px solid #22254b;
