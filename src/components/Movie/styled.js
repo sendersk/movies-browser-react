@@ -47,6 +47,7 @@ export const Header = styled.h3`
 
 export const Span = styled.span`
   background-color: #22254b;
+  font-weight: 700;
   border-radius: 5px;
   padding: 0.5rem;
 `
