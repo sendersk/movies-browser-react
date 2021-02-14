@@ -44,3 +44,9 @@ export const Info = styled.div`
 export const Header = styled.h3`
   margin: 0;
 `;
+
+export const Span = styled.span`
+  background-color: #22254b;
+  border-radius: 5px;
+  padding: 0.5rem;
+`
