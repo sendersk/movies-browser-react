@@ -1,13 +1,21 @@
 import React, { useEffect, useState } from "react";
 import Movie from "./components/Movie/Movie";
 import { Container } from "./components/Container/styled";
-import Navigation from "./components/Navigation/Navigation";
+import {
+  NavigationContainer,
+  Wrapper,
+  Input,
+} from "./components/Search/styled";
 
 const FEATURED_API =
   "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=f271630baa852ad3c9f1b5da3a4d53aa&page=1";
-  
+
+const SEARCH_API =
+  "https://api.themoviedb.org/3/search/movie?&api_key=f271630baa852ad3c9f1b5da3a4d53aa&query=";
+
 function App() {
   const [movies, setMovies] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     fetch(FEATURED_API)
@@ -18,10 +26,40 @@ function App() {
       });
   }, []);
 
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+
+    if(searchTerm){
+      fetch(SEARCH_API+searchTerm)
+      .then((res) => res.json())
+      .then((data) => {
+        setMovies(data.results);
+      });
+
+      setSearchTerm("");
+    }
+    
+  };
+
+  const handleOnChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
   return (
     <>
       <Container>
-        <Navigation />
+        <NavigationContainer>
+          <Wrapper>
+            <form onSubmit={handleOnSubmit}>
+              <Input
+                type="search"
+                value={searchTerm}
+                onChange={handleOnChange}
+                placeholder="Search..."
+              />
+            </form>
+          </Wrapper>
+        </NavigationContainer>
         {movies.length > 0 &&
           movies.map((movie) => <Movie key={movie.id} {...movie} />)}
       </Container>
