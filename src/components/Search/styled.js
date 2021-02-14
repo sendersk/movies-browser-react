@@ -20,4 +20,8 @@ export const Input = styled.input`
   padding: 6px 12px;
   border: 2px solid #22254b;
   border-radius: 50px;
+
+  &:focus {
+    outline: none;
+  }
 `;
