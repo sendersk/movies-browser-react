@@ -9,7 +9,7 @@ export const Overview = styled.div`
   left: 0;
   right: 0;
   overflow: auto;
-  max-height: 100%;
+  height: 100%;
   transform: translateY(102%);
 `;
 
