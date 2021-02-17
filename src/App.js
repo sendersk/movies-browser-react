@@ -18,7 +18,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    getMovies(FEATURED_API)
+    getMovies(FEATURED_API);
   }, []);
 
   const getMovies = (API) => {
@@ -28,15 +28,15 @@ function App() {
         console.log(data);
         setMovies(data.results);
       });
-  }
+  };
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
 
     if (searchTerm) {
-      getMovies(SEARCH_API + searchTerm)
+      getMovies(SEARCH_API + searchTerm);
 
-        setSearchTerm("");
+      setSearchTerm("");
     }
   };
 

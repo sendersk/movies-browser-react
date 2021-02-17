@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
   &:hover {
     ${Overview} {
       transform: translateY(0%);
-      transition: .3s ease-out;
+      transition: 0.3s ease-out;
     }
   }
 `;
@@ -50,4 +50,4 @@ export const Span = styled.span`
   font-weight: 700;
   border-radius: 5px;
   padding: 0.5rem;
-`
+`;
