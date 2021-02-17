@@ -12,7 +12,7 @@ function Movie({ title, poster_path, overview, vote_average }) {
         <Span>{vote_average}</Span>
       </Info>
       <Overview>
-        <h2>Overview:</h2>
+        <Header>{title}</Header>
         <p>{overview}</p>
       </Overview>
     </Wrapper>
