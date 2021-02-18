@@ -28,6 +28,18 @@ export const Wrapper = styled.div`
       transition: 0.3s ease-out;
     }
   }
+
+  @media (max-width: 1024px) {
+    width: 28%;
+  }
+
+  @media (max-width: 768px) {
+    width: 40%;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+  }
 `;
 
 export const Image = styled.img`
